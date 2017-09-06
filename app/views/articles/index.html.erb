@@ -1,0 +1,13 @@
+<%# ERB is an embedded ruby file  %>
+<%# Clauses starting with "<%" will be hidden %>
+<%# Clauses starting with "<%=" will be output %>
+
+<h1>All Articles</h1>
+
+<ul id="articles">
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title %>
+    </li>
+  <% end %>
+</ul>
