@@ -8,4 +8,6 @@ Blogger::Application.routes.draw do
   end
   
   resources :tags
+
+  resources :authors
 end
