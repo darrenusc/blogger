@@ -12,9 +12,9 @@ class AuthorsController < ApplicationController
   def show
   end
 
-  before_filter :zero_authors_or_authenticated, only: [:new, :create]
+  before_action :zero_authors_or_authenticated, only: [:new, :create]
 
-  def :zero_authors_or_authenticated
+  def zero_authors_or_authenticated
     unless Author.count == 0 || current_user
       redirect_to root_path
       return false
